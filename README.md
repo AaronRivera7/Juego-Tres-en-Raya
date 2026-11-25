@@ -1,6 +1,6 @@
 # Tres en Raya
 
-Proyecto integrador de primer nivel · Lógica de Programación · UIDE · Paralelo [B]
+Proyecto integrador de primer nivel · Lógica de Programación · UIDE · Paralelo B
 
 Juego por turnos para dos jugadores con modo local y, más adelante, modo multijugador cliente-servidor en red LAN.
 
@@ -12,7 +12,7 @@ Juego por turnos para dos jugadores con modo local y, más adelante, modo multij
 
 ## Cómo ejecutarlo
 
-```bash
+´´´bash´´
 python juego.py
 python game_logic.py     
 
@@ -20,7 +20,7 @@ python game_logic.py
 ## Estructura del repositorio
 
 | Archivo | Qué hace | Estado |
-
+|---|---|---|
 | `juego.py` | [Menú que se repite hasta elegir la opción "salir"] | [Iniciado] |
 | `game_logic.py` | [Validá las jugadas en el tablero (DF2) y procesa los datos para dar a un ganador,perdedor o empate, finalizando así la partida (DF3)] | [ Iniciado] |
 | `server.py` | [El Jugador 1 sera anfitrión y proporcionara el modo local y multijugador al cliente] | [Pendiente] |
@@ -50,16 +50,15 @@ Declaramos que el código de este repositorio fue escrito por los integrantes de
 citados en la sección «Créditos».
 
 ## Créditos
-
+| Recurso (código, librería, imagen…) | Autor o fuente | Dónde se usa | Licencia |
+|---|---|---|---|
 | Lenguaje Python 3 (solo biblioteca estándar, sin librerías externas) | Python Software Foundation, python.org | Para ejecutar `juego.py` y `game_logic.py` | PSF License |
 | Código de terceros | Ninguno | — | — |
 | Imágenes, sonidos u otros recursos visuales | Ninguno (interfaz de consola) | — | — |
 
 ### Uso de IA
 
-<!-- Si no usaron IA, escriban: «No se usaron herramientas de IA». -->
-
 | Herramienta | Para qué la usamos | Qué revisamos o cambiamos nosotros |
-
+|---|---|---|
 | [Gemini] | [Correciones al momento de redactar el código y organizar de forma correcta el README.MD ] | [Cambiamos información adicional y especificamos de una forma más práctica y precisa el repositorio] |
 | [ Claude Anthropic] | [Nos ayudo a comprobar  la traducción y opciones al momento de pasar a código Python en el DF2 y DF3 sean identicos al Raptor de la fase 2 ] | [Comprobados salidas y entradas al momento de validar el menú, lógica y fin de la partida, tomando en cuenta siempre la fase 2 de nuestros Raptors] |
