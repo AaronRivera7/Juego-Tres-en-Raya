@@ -37,8 +37,7 @@ python game_logic.py
 
 ## Video explicativo
 
-[Enlace al video] (máximo 5 minutos: el menú, la validación con una jugada inválida, el fin de la partida y cómo
-tradujimos un diagrama a código).
+[https://www.youtube.com/watch?v=oqUuPx1PLxE] 
 
 ## Licencia
 
