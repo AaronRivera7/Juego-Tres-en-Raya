@@ -1,12 +1,6 @@
-<!--
-Plantilla del README.md · Proyecto integrador · Fase 3 (Lógica de Programación)
-Copien este archivo en la raíz del repositorio con el nombre README.md, completen los textos entre
-corchetes y borren estos comentarios. Los ejemplos usan el dominó solo como guía.
--->
-
 # Tres en Raya
 
-Proyecto integrador de primer nivel · Lógica de Programación · UIDE · Paralelo [X]
+Proyecto integrador de primer nivel · Lógica de Programación · UIDE · Paralelo [B]
 
 Juego por turnos para dos jugadores con modo local y, más adelante, modo multijugador cliente-servidor en red LAN.
 
@@ -18,35 +12,28 @@ Juego por turnos para dos jugadores con modo local y, más adelante, modo multij
 
 ## Cómo ejecutarlo
 
-Requiere Python 3. Desde la carpeta del repositorio:
+```bash
+python juego.py
+python game_logic.py     
 
-```
-python juego.py          (menú)
-python game_logic.py     (validación de la jugada y fin de la partida)
-```
 
 ## Estructura del repositorio
 
 | Archivo | Qué hace | Estado |
-|---|---|---|
-| `juego.py` | [Menú que se repite hasta «Salir» (parte de DF1)] | [Terminado / Iniciado] |
-| `game_logic.py` | [Validación de la jugada (DF2) y fin de la partida (DF3)] | [Terminado / Iniciado] |
-| `server.py` | [Comentario con lo que hará el servidor (Jugador 1)] | [Pendiente] |
-| `client.py` | [Comentario con lo que hará el cliente (Jugador 2)] | [Pendiente] |
+
+| `juego.py` | [Menú que se repite hasta elegir la opción "salir"] | [Iniciado] |
+| `game_logic.py` | [Validá las jugadas en el tablero (DF2) y procesa los datos para dar a un ganador,perdedor o empate, finalizando así la partida (DF3)] | [ Iniciado] |
+| `server.py` | [El Jugador 1 sera anfitrión y proporcionara el modo local y multijugador al cliente] | [Pendiente] |
+| `client.py` | [Permite al Jugador 2 usar el modo local o multijugador en la Red Lan] | [Pendiente] |
 | `diseno/` | Diagramas `.rap` de la Fase 2 | [Subido] |
 
 ## Del diseño al código
 
 | Diagrama de la Fase 2 | Archivo y líneas | Qué cambió al traducirlo |
 |---|---|---|
-| DF1 Partida completa (solo el menú) | [`juego.py`, líneas …] | [...] |
-| DF2 Validación de la jugada | [`game_logic.py`, líneas …] | [...] |
-| DF3 Fin de la partida | [`game_logic.py`, líneas …] | [...] |
-
-<!-- El bucle de turnos de DF1 (la partida completa) se programa en la Fase 4. -->
-
-<!-- Ejemplo (dominó): DF2 · game_logic.py, líneas 20-31 · El Loop de RAPTOR pasó a ser un while que se repite
-mientras el número de ficha no esté en la mano del jugador o no encaje en un extremo. -->
+| DF1 Partida completa (solo el menú) | [`juego.py`, 12-28 ] | [En el menú se implemento while para que la consola solo saliera del bucle al momento de elegir "salir" ] |
+| DF2 Validación de la jugada | [`game_logic.py`, 21-102] | [Se asigno una casillas predeterminadas del c1-c9 simulando una partida en curso al igual que en Raptor, logrando un ciclo de validacion con while not jugada_valida, .isdecimal en el rango 1-9 para validar la casilla libre ] |
+| DF3 Fin de la partida | [`game_logic.py`, 104-186] | [Para que el programa determine si continuar la partida o finalizarla con el resultado obtenido, se valida las 8 posibles líneas ganadoras y conteo de casillas ocupadas] |
 
 ## Video explicativo
 
@@ -73,5 +60,6 @@ citados en la sección «Créditos».
 <!-- Si no usaron IA, escriban: «No se usaron herramientas de IA». -->
 
 | Herramienta | Para qué la usamos | Qué revisamos o cambiamos nosotros |
-|---|---|---|
-| [...] | [...] | [...] |
+
+| [Gemini] | [Correciones al momento de redactar el código y organizar de forma correcta el README.MD ] | [Cambiamos información adicional y especificamos de una forma más práctica y precisa el repositorio] |
+| [ Claude Anthropic] | [Nos ayudo a comprobar  la traducción y opciones al momento de pasar a código Python en el DF2 y DF3 sean identicos al Raptor de la fase 2 ] | [Comprobados salidas y entradas al momento de validar el menú, lógica y fin de la partida, tomando en cuenta siempre la fase 2 de nuestros Raptors] |
